@@ -15,8 +15,8 @@ urls= ['/Time/Time',
        '/Errors/Lockout',
        '/Errors/LastErrorTime',
        '/Errors/LastError',
-#       '/Errors/LastLockoutReleseTime',
-#       '/Errors/ErrorList',
+       '/Errors/LastLockoutReleseTime',
+       '/Errors/ErrorList',
        '/Properties/ID',
        '/Properties/Firmware',
        '/Properties/Hardware',
@@ -35,9 +35,10 @@ urls= ['/Time/Time',
        '/ISM010_all',
        '/ISM010_available',
        '/FileList']
-for prop in urls:
-    url = host+prop
-    time.sleep(1)
-    print (url)
-    result=Get(url)
-    print (prop,Get(url))
+def go():
+    for prop in urls:
+        url = host+prop
+        time.sleep(5)
+        print (url)
+        result=Get(url)
+        print (prop,Get(url))
